@@ -131,8 +131,10 @@ Promover inclusão, autonomia e acessibilidade por meio da tecnologia, permitind
 
 Projeto desenvolvido por:
 
-* Iasmim Silva
-* Equipe de Desenvolvimento do Projeto Comunicação Assistiva
+* Iasmim Kaylane da Silva
+* Graziele da Silva Feitosa
+* Gerlane Bernardo de Medeiros
+* Ingrid Yannara Nicácio da Silva
 
 ## Licença
 
