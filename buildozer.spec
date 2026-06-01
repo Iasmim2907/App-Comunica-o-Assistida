@@ -22,7 +22,7 @@ source.exclude_dirs = .git,__pycache__,.venv
 version = 1.0
 
 # Dependências Python
-requirements = python3==3.12.0,kivy==2.3.1,pillow==11.2.1
+requirements = python3==3.14.2,kivy==2.3.1,pillow==11.2.1
 
 # Orientação
 orientation = portrait
