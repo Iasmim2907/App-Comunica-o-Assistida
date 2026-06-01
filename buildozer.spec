@@ -22,7 +22,7 @@ source.exclude_dirs = .git,__pycache__,.venv
 version = 1.0
 
 # Dependências Python
-requirements = python3,kivy,pillow,pygame
+requirements = python3==3.12.0,kivy==2.3.1,pillow==11.2.1
 
 # Orientação
 orientation = portrait
@@ -36,7 +36,7 @@ android.permissions = INTERNET
 # Configuração Android
 android.api = 33
 android.minapi = 21
-android.ndk = 25b
+android.ndk = 25c
 
 # Aceitar licenças automaticamente
 android.accept_sdk_license = True
@@ -47,5 +47,4 @@ icon.filename = assets/icon.png
 [buildozer]
 
 log_level = 2
-
 warn_on_root = 1
