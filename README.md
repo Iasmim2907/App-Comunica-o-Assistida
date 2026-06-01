@@ -1,225 +1,139 @@
-# Comunicação Assistiva AAC
+# Comunicação Assistiva
 
-## Descrição
+Aplicativo Android desenvolvido com **Python** e **Kivy** para auxiliar pessoas com dificuldades de comunicação por meio de pictogramas e reprodução de áudio.
 
-Aplicação mobile desenvolvida em Python utilizando o framework Kivy, voltada para Comunicação Aumentativa e Alternativa (AAC) com foco em usuários autistas não verbais.
+## Sobre o Projeto
 
-O sistema permite a comunicação por meio de cartões visuais interativos associados à reprodução de áudio, oferecendo uma interface acessível, intuitiva e adaptada para dispositivos móveis.
+O Comunicação Assistiva é uma ferramenta de Comunicação Aumentativa e Alternativa (CAA) que permite ao usuário expressar necessidades, emoções, condições de saúde e interações sociais através de uma interface simples, intuitiva e visual.
 
----
+Ao tocar em uma imagem, o aplicativo reproduz um áudio correspondente, facilitando a comunicação com familiares, cuidadores, professores e profissionais da saúde.
 
-# Objetivos
+## Funcionalidades
 
-O projeto possui como principais objetivos:
+* Interface visual simples e acessível
+* Navegação por categorias
+* Reprodução de áudio ao selecionar um pictograma
+* Layout adaptado para dispositivos móveis
+* Design com cores terapêuticas
+* Transições suaves entre telas
+* Funciona offline
 
-* Facilitar a comunicação de usuários não verbais;
-* Oferecer uma interface visual simplificada;
-* Minimizar barreiras de interação;
-* Disponibilizar um sistema leve e executável em dispositivos Android;
-* Estruturar uma base escalável para futuras funcionalidades AAC.
+## Categorias Disponíveis
 
----
+### Necessidades
 
-# Funcionalidades
+* Água
+* Fome
+* Banheiro
+* Cansado
 
-## Comunicação por cartões visuais
+### Emoções
 
-Cada ação do usuário é representada por:
+* Feliz
+* Triste
+* Bravo
+* Assustado
 
-* imagem ilustrativa;
-* legenda textual;
-* reprodução de áudio correspondente.
+### Saúde
 
----
+* Dor
+* Doente
+* Tonto
+* Remédio
 
-## Organização por categorias
+### Social
 
-Os elementos de comunicação são separados em categorias semânticas:
+* Ajuda
+* Abraço
+* Brincar
+* Conversar
 
-* Necessidades;
-* Emoções;
-* Saúde;
-* Social.
+## Tecnologias Utilizadas
 
----
+* Python
+* Kivy
+* Buildozer
+* Python-for-Android (p4a)
 
-## Reprodução de áudio
+## Estrutura do Projeto
 
-O aplicativo utiliza arquivos de áudio locais para garantir:
-
-* baixa latência;
-* funcionamento offline;
-* maior estabilidade.
-
----
-
-## Interface terapêutica
-
-A interface foi projetada considerando:
-
-* paleta de cores suaves;
-* contraste adequado;
-* elementos visuais grandes;
-* organização simplificada;
-* legibilidade ampliada.
-
----
-
-## Navegação simplificada
-
-O fluxo de navegação foi reduzido para minimizar carga cognitiva e facilitar o uso independente.
-
----
-
-# Tecnologias Utilizadas
-
-| Tecnologia     | Finalidade                        |
-| -------------- | --------------------------------- |
-| Python         | Linguagem principal               |
-| Kivy           | Interface gráfica multiplataforma |
-| Buildozer      | Geração de APK Android            |
-| Plyer          | Recursos nativos do dispositivo   |
-| GitHub Actions | Automação de build                |
-
----
-
-# Estrutura do Projeto
-
-```plaintext
-projeto/
-│
-├── main.py
-│
+```text
+.
 ├── assets/
-│   ├── agua.png
-│   ├── fome.png
-│   └── ...
+│   ├── necessidades.png
+│   ├── emocoes.png
+│   ├── saude.png
+│   ├── social.png
+│   └── demais pictogramas
 │
 ├── audios/
 │   ├── agua.mp3
 │   ├── fome.mp3
-│   └── ...
+│   ├── banheiro.mp3
+│   └── demais áudios
 │
 ├── fonts/
 │   └── BebasNeue-Regular.ttf
 │
-└── buildozer.spec
+├── main.py
+├── buildozer.spec
+└── README.md
 ```
 
----
+## Instalação
 
-# Arquitetura
+### Clonar o repositório
 
-O sistema é baseado em:
-
-* `ScreenManager` para gerenciamento de telas;
-* componentes personalizados reutilizáveis;
-* carregamento dinâmico de categorias;
-* renderização responsiva com Kivy.
-
----
-
-# Estrutura das Categorias
-
-Cada categoria é definida por:
-
-```python
-categorias = {
-    "Categoria": [
-        ("Legenda", "imagem", "audio.mp3")
-    ]
-}
+```bash
+git clone https://github.com/Iasmim2907/App-Comunica-o-Assistida.git
+cd App-Comunica-o-Assistida
 ```
 
----
-
-# Execução Local
-
-## Instalação das dependências
+### Instalar dependências
 
 ```bash
 pip install kivy
 ```
 
----
-
-## Execução do projeto
+### Executar localmente
 
 ```bash
 python main.py
 ```
 
----
+## Gerar APK
 
-# Geração de APK Android
+### Linux
 
-O projeto é compatível com:
+```bash
+buildozer android debug
+```
 
-* Buildozer;
-* GitHub Actions;
-* ambientes Linux/WSL.
+O APK será gerado em:
 
----
+```text
+bin/
+```
 
-# Requisitos
+## Público-Alvo
 
-## Python
+* Pessoas com Transtorno do Espectro Autista (TEA)
+* Pessoas com deficiência na fala
+* Crianças em processo de desenvolvimento da comunicação
+* Instituições educacionais
+* Clínicas e centros terapêuticos
 
-* Python 3.10+
+## Objetivo
 
-## Dependências
+Promover inclusão, autonomia e acessibilidade por meio da tecnologia, permitindo uma comunicação mais rápida, simples e eficiente.
 
-* kivy
-* pillow
-* plyer
+## Autores
 
----
+Projeto desenvolvido por:
 
-# Diretrizes de Interface
+* Iasmim Silva
+* Equipe de Desenvolvimento do Projeto Comunicação Assistiva
 
-A interface foi construída seguindo princípios relacionados a:
+## Licença
 
-* acessibilidade;
-* comunicação alternativa;
-* redução de estímulos excessivos;
-* organização visual;
-* feedback tátil e visual.
-
----
-
-# Melhorias Futuras
-
-## Funcionalidades planejadas
-
-* sistema PECS completo;
-* construção dinâmica de frases;
-* síntese de voz offline;
-* múltiplos perfis de usuário;
-* sincronização em nuvem;
-* histórico de comunicação;
-* sistema de favoritos;
-* vibração háptica;
-* suporte multilíngue;
-* modo escuro;
-* analytics de uso.
-
----
-
-# Escalabilidade
-
-A arquitetura atual permite:
-
-* expansão modular;
-* separação futura em múltiplos arquivos;
-* integração com APIs externas;
-* persistência local de dados;
-* adaptação para tablets.
-
----
-
-# Licença
-
-Este projeto está licenciado sob a licença MIT.
-
----
-
+Este projeto é destinado para fins educacionais e sociais.
